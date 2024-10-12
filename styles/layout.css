@@ -1,0 +1,65 @@
+* {
+  --header-height: 60px;
+  --footer-height: 80px;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: var(--header-height) auto var(--footer-height);
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    overflow: hidden;
+}
+
+header {
+  grid-area: header;
+
+  background-color: var(--primary-color);
+  color: #262626;
+}
+
+main {
+  grid-area: main;
+  min-height: calc(100vh - 60px - 80px);
+}
+
+footer {
+  grid-area: footer;
+}
+
+.header-container {
+  height: var(--header-height);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-logo {
+  height: 100%;
+}
+
+.main-logo img {
+  width: auto;
+  height: 100%;
+}
+
+nav {}
+
+nav ul.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav ul.menu > li > a {
+  padding: 22px 16px;
+}
+
+nav ul.menu > li > a:hover {
+  background-color: var(--secondary-color);
+
+}
+

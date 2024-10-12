@@ -1,0 +1,39 @@
+* {
+  --heading-font-family: Helvetica, sans-serif;
+  --content-font-family: monospace;
+  --content-font-size: 1rem;
+  --heading-color: #262662;
+  --content-color: #262662;
+  --primary-color: #ffc8dd;
+  --secondary-color: #ffafcc;
+}
+
+body {
+  font-family: var(--content-font-family);
+  color: var(--content-color);
+  font-size: var(--content-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+}
+
+a {
+  color: var(--content-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--content-color);
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
