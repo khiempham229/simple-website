@@ -1,3 +1,5 @@
+@import url(./base.css);
+
 * {
   --header-height: 60px;
   --footer-height: 80px;
@@ -15,7 +17,6 @@
 
 header {
   grid-area: header;
-
   background-color: var(--primary-color);
   color: #262626;
 }
@@ -27,11 +28,12 @@ main {
 
 footer {
   grid-area: footer;
+  background-color: var(--primary-color);
+  color: #262626;
 }
 
 .header-container {
   height: var(--header-height);
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,3 +65,36 @@ nav ul.menu > li > a:hover {
 
 }
 
+.header-right .control-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.header-right .control-box .search-box {
+  position: relative;
+}
+
+.control-box .search-box input {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  animation: AnimateTop 0.4s;
+}
+
+.control-box .search-box .search-icon:hover + input,
+.control-box .search-box input:hover {
+  display: block;
+}
+
+.main-container {}
+
+/* Footer */
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
