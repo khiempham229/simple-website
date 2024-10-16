@@ -1,4 +1,5 @@
 @import url(./shared/layout.css);
+@import url(./shared/products.css);
 
 .homepage {}
 
@@ -57,4 +58,20 @@
 
 .carousel-container .carousel-control-btn:hover {
   background-color: #00000075;
+}
+
+/* Policy Card */
+.policy-section {
+  margin: 32px 0;
+}
+.policy-container {
+}
+
+.policy-card {
+  width: 50vw;
+  height: 500px;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  margin: 0 auto;
+  text-align: center;
 }

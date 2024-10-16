@@ -3,6 +3,7 @@
 * {
   --header-height: 60px;
   --footer-height: 80px;
+  --dropdown-radius: 8px;
 }
 
 .app {
@@ -48,21 +49,56 @@ footer {
   height: 100%;
 }
 
+/* Nav */
 nav {}
 
 nav ul.menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  text-transform: capitalize;
+}
+
+nav ul.menu > li {
+  position: relative;
 }
 
 nav ul.menu > li > a {
-  padding: 22px 16px;
+  display: inline-block;
+  padding: 18px 16px;
 }
 
 nav ul.menu > li > a:hover {
   background-color: var(--secondary-color);
+}
 
+nav ul.menu > li > .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  min-width: 200px;
+  background-color: #F9F9F9;
+  border-width: 1px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 4px 0;
+}
+
+nav ul.menu > li > a:hover + .submenu,
+nav ul.menu > li > a + .submenu:hover {
+  display: block;
+}
+
+nav ul.menu > li > .submenu > li > a {
+  padding: 8px 12px;
+  width: 100%;
+}
+
+nav ul.menu > li > .submenu > li > a:hover {
+  background-color: var(--secondary-color);
 }
 
 .header-right .control-box {
@@ -70,6 +106,7 @@ nav ul.menu > li > a:hover {
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+  text-transform: capitalize;
 }
 
 .header-right .control-box .search-box {
@@ -78,9 +115,10 @@ nav ul.menu > li > a:hover {
 
 .control-box .search-box input {
   position: absolute;
-  display: none;
   top: 100%;
   left: 0;
+  z-index: 1;
+  display: none;
   animation: AnimateTop 0.4s;
 }
 
