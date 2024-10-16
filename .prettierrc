@@ -11,37 +11,33 @@
   "bracketSameLine": false,
   "arrowParens": "always",
   "htmlWhitespaceSensitivity": "ignore",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "embeddedLanguageFormatting": "auto",
   "overrides": [
     {
       "files": "*.html",
       "options": {
-        "printWidth": 120,
-        "singleQuote": true
+        "printWidth": 120
       }
     },
     {
       "files": "*.css",
       "options": {
-        "printWidth": 80,
-        "singleQuote": false
+        "printWidth": 120
       }
     },
     {
       "files": "*.php",
       "options": {
         "printWidth": 120,
-        "phpVersion": "7.4",
-        "singleQuote": false
+        "phpVersion": "7.4"
       }
     },
     {
       "files": "*.js",
       "options": {
-        "printWidth": 80,
-        "semi": true,
-        "singleQuote": true
+        "printWidth": 120,
+        "semi": true
       }
     }
   ]
