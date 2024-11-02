@@ -51,3 +51,11 @@
   overflow: hidden;
   -webkit-line-clamp: 2;
 }
+
+.products-control {
+  margin-bottom: 24px;
+}
+
+nav.category {
+  border-bottom: 1px solid var(--separation-color);
+}

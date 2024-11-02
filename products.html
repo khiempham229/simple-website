@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/products-page.css" />
   </head>
 
   <body>
@@ -82,39 +82,60 @@
         </div>
       </header>
       <main>
-        <div class="main-container homepage">
-          <div class="banner-container">
-            <section class="carousel-container">
-              <div class="carousel-list">
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-1.jpg" alt="slide1" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-2.jpg" alt="slide2" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-3.jpg" alt="slide3" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-4.jpg" alt="slide4" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-5.jpg" alt="slide5" />
-                </div>
-              </div>
-              <div class="carousel-control">
-                <button class="icon carousel-control-btn prev-btn" aria-label="Left">
-                  <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="icon carousel-control-btn next-btn" aria-label="Right">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-            </section>
-          </div>
+        <div class="main-container products-page">
+          <nav class="breadcrumb-container">
+            <div class="container">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Sản phẩm</li>
+              </ol>
+            </div>
+          </nav>
           <div class="products-section">
             <div class="container">
-              <h2 class="section-title text-center">Sản phẩm bán chạy</h2>
+              <div class="products-control">
+                <nav class="category">
+                  <ul class="tabs">
+                    <li class="tab-item"><a href="#">All</a></li>
+                    <li class="tab-item"><a href="#?category-1">Danh Mục 1</a></li>
+                    <li class="tab-item"><a href="#?category-2">Danh Mục 2</a></li>
+                    <li class="tab-item"><a href="#?category-3">Danh Mục 3</a></li>
+                    <li class="tab-item"><a href="#?category-4">Danh Mục 4</a></li>
+                    <li class="tab-item"><a href="#?category-5">Danh Mục 5</a></li>
+                    
+                  </ul>
+                </nav>
+                <div class="filter">
+                  <button class="icon filter-btn" aria-label="Filter" onclick="toggleFilter()">
+                    <i class="fa-solid fa-filter"></i>
+                    <span>Filter</span>
+                  </button>
+                  <div class="drawer filter-drawer animation-fade-right">
+                    <div class="drawer-overlay" onclick="toggleFilter()"></div>
+                    <div class="drawer-content-wrapper">
+                      <div class="drawer-content">
+                        <div class="drawer-header">
+                          <div class="drawer-header-title-wrapper">
+                            <h2 class="drawer-header-title">Filter</h2>
+                            <button class="icon close-btn" aria-label="Close" onclick="toggleFilter()">
+                              <i class="fa-solid fa-x"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="drawer-body">
+                          Filter
+                        </div>
+                        <div class="drawer-footer">
+                          <div class="control-group">
+                            <button class="drawer-control-btn" type="reset">Reset</button>
+                            <button class="drawer-control-btn primary-btn" type="submit">Lưu</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <section class="products-list">
                 <div class="product-item">
                   <div class="product-card">

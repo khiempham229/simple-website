@@ -1,4 +1,4 @@
-@keyframes AnimateTop {
+@keyframes FadeTop {
   from {
     top: 0;
     opacity: 0
@@ -8,4 +8,25 @@
     top: 100%;
     opacity: 1
   }
+}
+
+.animation-fade-top {
+  animation: FadeTop .4s ease-in-out;
+}
+
+
+@keyframes FadeRight {
+  from {
+    left: -200%;
+    opacity: 0
+  }
+
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+.animation-fade-right {
+  animation: FadeRight .5s ease-in-out;
 }
