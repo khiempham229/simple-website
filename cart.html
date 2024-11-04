@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira Kira - Cart</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/shared/layout.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="container">
+          <div class="header-container">
+            <div class="main-logo">
+              <a href="/">
+                <img src="assets/images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#1">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                  </a>
+                </li>
+                <li class="menu-item"><a href="#2">Giới thiệu</a></li>
+                <li class="menu-item">
+                  <a href="#3">
+                    Sản phẩm
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Sản phẩm 1</a></li>
+                    <li><a href="#">Sản phẩm 2</a></li>
+                    <li><a href="#">Sản phẩm 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#4">
+                    <i class="fa-solid fa-gift"></i>
+                    gift
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Gift 1</a></li>
+                    <li><a href="#">Gift 2</a></li>
+                    <li><a href="#">Gift 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#5">Sale off</a></li>
+                <li class="menu-item"><a href="#5">Chính sách</a></li>
+                <li class="menu-item"><a href="#5">Liên hệ</a></li>
+              </ul>
+            </nav>
+            <div class="header-right">
+              <div class="control-box">
+                <div class="search-box">
+                  <button class="icon search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <input id="search-input" name="search-input" type="text" placeholder="Tìm kiếm" />
+                </div>
+                <button id="mini-cart" class="icon">
+                  <a href="/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </button>
+                <div class="account">
+                  <a href="/dang-ky">Đăng ký</a>
+                  |
+                  <a href="/dang-nhap">Đăng nhập</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-container cart-page">
+          <h1>Cart</h1>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="footer-container">
+            <p>&copy;copyright by KhiemPham</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -43,7 +43,7 @@ footer {
 .main-logo {
   height: 100%;
 }
-
+.main-logo a,
 .main-logo img {
   width: auto;
   height: 100%;
@@ -107,6 +107,10 @@ nav ul.menu > li > .submenu > li > a:hover {
   justify-content: flex-end;
   gap: 8px;
   text-transform: capitalize;
+}
+
+.header-right .control-box .account {
+  padding-inline: 8px;
 }
 
 .header-right .control-box .search-box {

@@ -1,0 +1,44 @@
+.profile-page {}
+
+.profile-container {
+  padding: 32px 0;
+}
+
+.profile-form {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin-inline: auto;
+}
+
+.profile-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+
+.profile-form .form-item {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 50%;
+}
+
+.profile-form .form-item input {
+  width: 100%;
+}
+
+.profile-form .form-item label.label-radio {
+  display: flex;
+  gap: 4px;
+}
+
+.profile-form .form-control {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}

@@ -64,14 +64,37 @@
 .policy-section {
   margin: 32px 0;
 }
-.policy-container {
-}
 
-.policy-card {
+.policy-container {
   width: 50vw;
-  height: 500px;
+  /* height: 500px; */
   background-color: var(--primary-color);
   border-radius: 16px;
   margin: 0 auto;
   text-align: center;
+  padding: 32px;
+}
+
+.policy-container h2 {}
+
+.policy-list {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.policy-list .policy-item {
+  display: inline-block;
+}
+
+.policy-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #BDE0FE;
+  padding: 8px 16px;
+  border: 1px;
+  border-radius: 8px;
 }

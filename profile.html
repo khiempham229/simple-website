@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira Kira - Profile</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/shared/layout.css" />
+    <link rel="stylesheet" href="styles/profile.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="container">
+          <div class="header-container">
+            <div class="main-logo">
+              <a href="/">
+                <img src="assets/images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#1">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                  </a>
+                </li>
+                <li class="menu-item"><a href="#2">Giới thiệu</a></li>
+                <li class="menu-item">
+                  <a href="#3">
+                    Sản phẩm
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Sản phẩm 1</a></li>
+                    <li><a href="#">Sản phẩm 2</a></li>
+                    <li><a href="#">Sản phẩm 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#4">
+                    <i class="fa-solid fa-gift"></i>
+                    gift
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Gift 1</a></li>
+                    <li><a href="#">Gift 2</a></li>
+                    <li><a href="#">Gift 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#5">Sale off</a></li>
+                <li class="menu-item"><a href="#5">Chính sách</a></li>
+                <li class="menu-item"><a href="#5">Liên hệ</a></li>
+              </ul>
+            </nav>
+            <div class="header-right">
+              <div class="control-box">
+                <div class="search-box">
+                  <button class="icon search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <input id="search-input" name="search-input" type="text" placeholder="Tìm kiếm" />
+                </div>
+                <button id="mini-cart" class="icon">
+                  <a href="/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </button>
+                <div class="account">
+                  <a href="/profile.html" class="profile-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Tài Khoản</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-container profile-page">
+          <div class="container">
+            <div class="profile-container">
+              <h1 class="text-center">Thông tin cá nhân</h1>
+              <form class="profile-form">
+                <div class="form-row">
+                  <div class="form-item">
+                    <label for="ten">Tên</label>
+                    <input id="ten" name="ten" type="text" placeholder="Tên">
+                  </div>
+                  <div class="form-item">
+                    <label for="ho">Họ</label>
+                    <input id="ho" name="ho" type="text" placeholder="Họ">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-item">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text" placeholder="Email" disabled>
+                  </div>
+                  <div class="form-item">
+                    <label for="sdt">Số điện thoại</label>
+                    <input id="sdt" name="sdt" type="text" placeholder="Số điện thoại">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-item">
+                    <label for="ngay-sinh">Ngày sinh</label>
+                    <input id="ngay-sinh" name="ngay-sinh" type="date"  placeholder="Ngày sinh">
+                  </div>
+                  <div class="form-item">
+                    <label for="gioi-tinh">Giới tính</label>
+                    <div class="radio-box">
+                      <label for="nam" class="label-radio">
+                        <input type="radio" id="nam" name="gioi-tinh" value="nam">
+                        <span>Nam</span>
+                      </label>
+                      <label for="nu" class="label-radio">
+                        <input type="radio" id="nu" name="gioi-tinh" value="nu">
+                        <span>Nữ</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-item">
+                    <label for="dia-chi">Địa chỉ</label>
+                    <textarea id="dia-chi" name="dia-chi" placeholder="Địa chỉ" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="form-control">
+                  <button class="btn-primary" type="button">Lưu</button>
+                  <button type="reset">Đặt lại</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="footer-container">
+            <p>&copy;copyright by KhiemPham</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
