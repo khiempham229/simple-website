@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira Kira - Account</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/shared/layout.css" />
+    <link rel="stylesheet" href="styles/account.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <div class="container">
+          <div class="header-container">
+            <div class="main-logo">
+              <a href="/">
+                <img src="assets/images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#1">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                  </a>
+                </li>
+                <li class="menu-item"><a href="#2">Giới thiệu</a></li>
+                <li class="menu-item">
+                  <a href="./products.html">
+                    Sản phẩm
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Sản phẩm 1</a></li>
+                    <li><a href="#">Sản phẩm 2</a></li>
+                    <li><a href="#">Sản phẩm 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#4">
+                    <i class="fa-solid fa-gift"></i>
+                    gift
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Gift 1</a></li>
+                    <li><a href="#">Gift 2</a></li>
+                    <li><a href="#">Gift 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#5">Sale off</a></li>
+                <li class="menu-item"><a href="#5">Chính sách</a></li>
+                <li class="menu-item"><a href="#5">Liên hệ</a></li>
+              </ul>
+            </nav>
+            <div class="header-right">
+              <div class="control-box">
+                <div class="search-box">
+                  <button class="icon search-icon" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <input
+                    id="search-input"
+                    name="search-input"
+                    class="animation-fade-top"
+                    type="text"
+                    placeholder="Tìm kiếm"
+                  />
+                </div>
+                <button id="mini-cart" class="icon" aria-label="Cart">
+                  <a href="/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </button>
+                <div class="account">
+                  <a href="/register.html">Đăng ký</a>
+                  |
+                  <a href="/account.html">Đăng nhập</a>
+                </div>
+                <!-- <div class="account">
+                  <a href="/profile.html" class="profile-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Tài Khoản</span>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-container account-page">
+          <div class="container">
+            <div class="account-container">
+              <div class="account-wrapper">
+                <div class="account-nav">
+                  <ul class="account-links">
+                    <li class="account-link-item active"><a class="nav-btn btn btn-text btn-signin">Sign in</a></li>
+                    <li class="account-link-item"><a class="nav-btn btn btn-text btn-signup">Sign up</a></li>
+                  </ul>
+                </div>
+                <div class="account-body">
+                  <form class="account-form signin-form active" action="" method="post" name="form">
+                    <div class="form-row">
+                      <div class="form-item">
+                        <label for="username">Username</label>
+                        <input class="form-styling" type="text" name="username" placeholder="Username" />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-item">
+                        <label for="password">Password</label>
+                        <input class="form-styling" type="text" name="password" placeholder="Password" />
+                      </div>
+                    </div>
+                    <div class="form-control">
+                      <div class="btn btn-primary btn-animate">
+                        <a class="btn-signin">Sign in</a>
+                      </div>
+                    </div>
+                  </form>
+
+                  <form class="account-form signup-form" action="" method="post" name="form">
+                    <div class="form-row">
+                      <div class="form-item">
+                        <label for="fullName">Full Name</label>
+                        <input class="form-styling" type="text" name="fullName" placeholder="Full Name" />
+                      </div>
+                      <div class="form-item">
+                        <label for="email">Email</label>
+                        <input class="form-styling" type="text" name="email" placeholder="Email" />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-item">
+                        <label for="password">Password</label>
+                        <input class="form-styling" type="text" name="password" placeholder="Password" />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-item">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input
+                          class="form-styling"
+                          type="text"
+                          name="confirm-password"
+                          placeholder="Confirm Password"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-control">
+                      <div class="btn btn-primary btn-animate">
+                        <a class="btn-signup">Sign Up</a>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="account-forgot">
+                  <a href="#">Forgot your password?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="footer-container">
+            <p>&copy;copyright by KhiemPham</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navBtns = document.querySelectorAll(".nav-btn");
+      const signInBtn = document.querySelector(".btn-signin");
+      const signUpBtn = document.querySelector(".btn-signup");
+      const accountForm = document.querySelector(".account-form");
+      const signInForm = document.querySelector(".signin-form");
+      const signUpForm = document.querySelector(".signup-form");
+
+      console.log(navBtns);
+      console.log(signUpBtn.parentElement);
+      console.log(signInBtn);
+      console.log(signInForm);
+      console.log(signUpForm);
+
+      signInBtn.addEventListener("click", function () {
+        signInBtn.parentElement.classList.add("active");
+        signUpBtn.parentElement.classList.remove("active");
+        signInForm.classList.add("active");
+        signUpForm.classList.remove("active");
+
+        signInForm.classList.remove("signin-form-left");
+        signUpForm.classList.remove("signup-form-left");
+      });
+
+      signUpBtn.addEventListener("click", function () {
+        signInBtn.parentElement.classList.remove("active");
+        signUpBtn.parentElement.classList.add("active");
+        signInForm.classList.remove("active");
+        signUpForm.classList.add("active");
+
+        signInForm.classList.add("signin-form-left");
+        signUpForm.classList.add("signup-form-left");
+      });
+
+      // document.querySelector(".nav-btn").addEventListener("click", function () {
+      //   document.querySelector(".signin-form").classList.toggle("signin-form-left");
+      //   document.querySelector(".signup-form").classList.toggle("signup-form-left");
+      //   document.querySelector(".signup-inactive").classList.toggle("signup-active");
+      //   document.querySelector(".signin-active").classList.toggle("signin-inactive");
+      //   document.querySelector(".forgot").classList.toggle("forgot-left");
+      //   this.classList.remove("idle");
+      //   this.classList.add("active");
+      // });
+
+      // document.querySelector(".btn-signup").addEventListener("click", function () {
+      //   document.querySelector(".nav").classList.toggle("nav-up");
+      //   document.querySelector(".signup-form-left").classList.toggle("signup-form-down");
+      //   document.querySelector(".success").classList.toggle("success-left");
+      // });
+
+      // document.querySelector(".btn-signin").addEventListener("click", function () {
+      //   document.querySelector(".btn-animate").classList.toggle("btn-animate-grow");
+      // });
+    });
+  </script>
+</html>

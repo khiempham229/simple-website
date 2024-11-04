@@ -159,8 +159,14 @@ button.icon,
   border-color: var(--secondary-color);
 }
 
+.btn-text {
+  border: 0;
+}
+
 /* Input */
-input, textarea, select {
+input,
+textarea,
+select {
   font-size: 1rem;
   font-family: var(--content-font-family);
   width: 100%;
@@ -193,6 +199,29 @@ input[type="radio"] {
   align-items: center;
   gap: 16px;
   height: 100%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+
+.form-item {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 50%;
+}
+
+.form-control {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
 }
 
 /* Text */
@@ -337,3 +366,4 @@ input[type="radio"] {
 .drawer-footer .control-group {
   float: right;
 }
+
