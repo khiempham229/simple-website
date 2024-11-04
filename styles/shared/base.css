@@ -160,9 +160,11 @@ button.icon,
 }
 
 /* Input */
-input, textarea {
+input, textarea, select {
   font-size: 1rem;
   font-family: var(--content-font-family);
+  width: 100%;
+  height: 100%;
   padding: 8px 12px;
   color: var(--border-color);
   border: none;
@@ -170,16 +172,15 @@ input, textarea {
   border-radius: var(--border-radius);
 }
 
-textarea {
-  width: 100%;
-}
-
 input:hover,
 textarea:hover,
+select:hover,
 input:focus,
 textarea:focus,
+select:focus,
 input:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
   outline: 0;
 }
 

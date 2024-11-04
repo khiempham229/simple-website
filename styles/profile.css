@@ -1,14 +1,88 @@
+.app {
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-columns: 400px 1fr 1fr;
+  overflow: hidden;
+}
+
+aside {
+  grid-area: sidebar;
+  /* background-color: var(--primary-color); */
+  background-color: #ffffff;
+  color: #262626;
+  max-width: 400px;
+}
+
+main {
+  
+}
+
+#profile-sidebar {
+}
+
+.sidebar-wrapper {
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.sidebar-header {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--separation-color);
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar-title img {
+  width: 50px;
+  height: 50px;
+}
+
+.sidebar-title span {
+  font-size: 2rem;
+}
+
+.sidebar-content {
+}
+
+.sidebar-content .sidebar-list {
+
+}
+
+.sidebar-content .sidebar-list .sidebar-item a {
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  padding: 16px;
+  user-select: none;
+}
+
+.sidebar-content .sidebar-list .sidebar-item.active,
+.sidebar-content .sidebar-list .sidebar-item:hover {
+  background-color: var(--primary-color);
+}
+
 .profile-page {}
 
 .profile-container {
   padding: 32px 0;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.profile-container .profile-title {
+  text-transform: capitalize;
+  font-size: 2rem;
 }
 
 .profile-form {
   width: 100%;
-  max-width: 800px;
   height: 100%;
-  margin-inline: auto;
 }
 
 .profile-form .form-row {
@@ -30,11 +104,6 @@
 
 .profile-form .form-item input {
   width: 100%;
-}
-
-.profile-form .form-item label.label-radio {
-  display: flex;
-  gap: 4px;
 }
 
 .profile-form .form-control {

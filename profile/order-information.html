@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kira Kira - Profile</title>
+    <base href="/">
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
     <link
       rel="stylesheet"
@@ -102,7 +103,7 @@
           <div class="sidebar-content">
             <ul class="sidebar-list">
               <li class="sidebar-item">
-                <a href="/profile.html">
+                <a href="profile.html">
                   <span>Thông tin cá nhân</span>
                 </a>
               </li>
@@ -111,7 +112,6 @@
                   <span>Thông tin đơn hàng</span>
                 </a>
               </li>
-              <!-- <li class="sidebar-item">Thông tin</li> -->
             </ul>
           </div>
         </div>
@@ -120,7 +120,7 @@
         <div class="main-container profile-page">
           <div class="container">
             <div class="profile-container">
-              <h2 class="profile-title">Thông tin cá nhân</h2>
+              <h2 class="text-center">Thông tin cá nhân</h2>
               <form class="profile-form">
                 <div class="form-row">
                   <div class="form-item">
@@ -130,59 +130,6 @@
                   <div class="form-item">
                     <label for="ho">Họ</label>
                     <input id="ho" name="ho" type="text" placeholder="Họ">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-item">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="text" placeholder="Email" disabled>
-                  </div>
-                  <div class="form-item">
-                    <label for="sdt">Số điện thoại</label>
-                    <input id="sdt" name="sdt" type="text" placeholder="Số điện thoại">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-item">
-                    <label for="ngay-sinh">Ngày sinh</label>
-                    <input id="ngay-sinh" name="ngay-sinh" type="date"  placeholder="Ngày sinh">
-                  </div>
-                  <div class="form-item">
-                    <label for="gioi-tinh">Giới tính</label>
-                    <select name="gioi-tinh" id="gioi-tinh">
-                      <option value="nam">Nam</option>
-                      <option value="nu">Nữ</option>
-                      <option value="khac">Khác</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-item">
-                    <label for="dia-chi">Địa chỉ</label>
-                    <textarea id="dia-chi" name="dia-chi" placeholder="Địa chỉ" rows="3"></textarea>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <button type="reset">Đặt lại</button>
-                  <button class="btn-primary" type="button">Lưu</button>
-                </div>
-              </form>
-              <h2 class="profile-title">Đổi mật khẩu</h2>
-              <form class="profile-form">
-                <div class="form-row">
-                  <div class="form-item">
-                    <label for="old-password">Mật khẩu cũ</label>
-                    <input id="old-password" name="old-password" type="text" placeholder="Mật khẩu cũ">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-item">
-                    <label for="new-password">Mật khẩu mới</label>
-                    <input id="new-password" name="new-password" type="text" placeholder="Mật khẩu mới">
-                  </div>
-                  <div class="form-item">
-                    <label for="new-password">Nhập lại mật khẩu</label>
-                    <input id="new-password" name="new-password" type="text" placeholder="Nhập lại mật khẩu">
                   </div>
                 </div>
                 <div class="form-control">

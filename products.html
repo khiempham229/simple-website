@@ -21,7 +21,9 @@
         <div class="container">
           <div class="header-container">
             <div class="main-logo">
-              <img src="assets/images/logo.svg" alt="logo" />
+              <a href="/">
+                <img src="assets/images/logo.svg" alt="logo" />
+              </a>
             </div>
             <nav>
               <ul class="menu">
@@ -66,16 +68,24 @@
                   <button class="icon search-icon" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  <input id="search-input" class="animation-fade-top" type="text" placeholder="Tìm kiếm" />
+                  <input id="search-input" name="search-input" class="animation-fade-top" type="text" placeholder="Tìm kiếm" />
                 </div>
-                <button class="icon" aria-label="Cart">
-                  <i class="fa-solid fa-cart-shopping"></i>
+                <button id="mini-cart" class="icon" aria-label="Cart">
+                  <a href="/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
                 </button>
                 <div class="account">
-                  <a href="#dang-ky">Đăng ký</a>
+                  <a href="/register.html">Đăng ký</a>
                   |
-                  <a href="#dang-nhap">Đăng nhập</a>
+                  <a href="/login.html">Đăng nhập</a>
                 </div>
+                <!-- <div class="account">
+                  <a href="/profile.html" class="profile-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Tài Khoản</span>
+                  </a>
+                </div> -->
               </div>
             </div>
           </div>
@@ -102,7 +112,6 @@
                     <li class="tab-item"><a href="#?category-3">Danh Mục 3</a></li>
                     <li class="tab-item"><a href="#?category-4">Danh Mục 4</a></li>
                     <li class="tab-item"><a href="#?category-5">Danh Mục 5</a></li>
-                    
                   </ul>
                 </nav>
                 <div class="filter">
