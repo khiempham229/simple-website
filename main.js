@@ -38,8 +38,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 
   // Thêm event click cho 2 button
-  prevBtn.addEventListener('click', showPrevSlide);
-  nextBtn.addEventListener('click', showNextSlide);
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', showPrevSlide);
+    nextBtn.addEventListener('click', showNextSlide);
 
-  updateCarousel();
+    updateCarousel();
+  }
+
 });
+
+function toggleFilter() {
+  const filterDrawer = document.querySelector('.filter .filter-drawer')
+  console.log(filterDrawer);
+  filterDrawer.classList.toggle('open');
+}

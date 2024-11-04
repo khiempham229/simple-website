@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/products-page.css" />
   </head>
 
   <body>
@@ -21,9 +21,7 @@
         <div class="container">
           <div class="header-container">
             <div class="main-logo">
-              <a href="/">
-                <img src="assets/images/logo.svg" alt="logo" />
-              </a>
+              <img src="assets/images/logo.svg" alt="logo" />
             </div>
             <nav>
               <ul class="menu">
@@ -68,17 +66,15 @@
                   <button class="icon search-icon" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  <input id="search-input" name="search-input" class="animation-fade-top" type="text" placeholder="Tìm kiếm" />
+                  <input id="search-input" class="animation-fade-top" type="text" placeholder="Tìm kiếm" />
                 </div>
-                <button id="mini-cart" class="icon" aria-label="Cart">
-                  <a href="/cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                  </a>
+                <button class="icon" aria-label="Cart">
+                  <i class="fa-solid fa-cart-shopping"></i>
                 </button>
                 <div class="account">
-                  <a href="/dang-ky">Đăng ký</a>
+                  <a href="#dang-ky">Đăng ký</a>
                   |
-                  <a href="/dang-nhap">Đăng nhập</a>
+                  <a href="#dang-nhap">Đăng nhập</a>
                 </div>
               </div>
             </div>
@@ -86,39 +82,60 @@
         </div>
       </header>
       <main>
-        <div class="main-container homepage">
-          <div class="banner-container">
-            <section class="carousel-container">
-              <div class="carousel-list">
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-1.jpg" alt="slide1" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-2.jpg" alt="slide2" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-3.jpg" alt="slide3" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-4.jpg" alt="slide4" />
-                </div>
-                <div class="carousel-slide">
-                  <img src="./assets/images/banner/banner-slide-5.jpg" alt="slide5" />
-                </div>
-              </div>
-              <div class="carousel-control">
-                <button class="icon carousel-control-btn prev-btn" aria-label="Left">
-                  <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="icon carousel-control-btn next-btn" aria-label="Right">
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-            </section>
-          </div>
+        <div class="main-container products-page">
+          <nav class="breadcrumb-container">
+            <div class="container">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Sản phẩm</li>
+              </ol>
+            </div>
+          </nav>
           <div class="products-section">
             <div class="container">
-              <h2 class="section-title text-center">Sản phẩm bán chạy</h2>
+              <div class="products-control">
+                <nav class="category">
+                  <ul class="tabs">
+                    <li class="tab-item"><a href="#">All</a></li>
+                    <li class="tab-item"><a href="#?category-1">Danh Mục 1</a></li>
+                    <li class="tab-item"><a href="#?category-2">Danh Mục 2</a></li>
+                    <li class="tab-item"><a href="#?category-3">Danh Mục 3</a></li>
+                    <li class="tab-item"><a href="#?category-4">Danh Mục 4</a></li>
+                    <li class="tab-item"><a href="#?category-5">Danh Mục 5</a></li>
+                    
+                  </ul>
+                </nav>
+                <div class="filter">
+                  <button class="icon filter-btn" aria-label="Filter" onclick="toggleFilter()">
+                    <i class="fa-solid fa-filter"></i>
+                    <span>Filter</span>
+                  </button>
+                  <div class="drawer filter-drawer animation-fade-right">
+                    <div class="drawer-overlay" onclick="toggleFilter()"></div>
+                    <div class="drawer-content-wrapper">
+                      <div class="drawer-content">
+                        <div class="drawer-header">
+                          <div class="drawer-header-title-wrapper">
+                            <h2 class="drawer-header-title">Filter</h2>
+                            <button class="icon close-btn" aria-label="Close" onclick="toggleFilter()">
+                              <i class="fa-solid fa-x"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="drawer-body">
+                          Filter
+                        </div>
+                        <div class="drawer-footer">
+                          <div class="control-group">
+                            <button class="drawer-control-btn" type="reset">Reset</button>
+                            <button class="drawer-control-btn primary-btn" type="submit">Lưu</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <section class="products-list">
                 <div class="product-item">
                   <div class="product-card">
@@ -188,52 +205,6 @@
                   </div>
                 </div>
               </section>
-            </div>
-          </div>
-          <div class="divider"></div>
-          <div class="policy-section">
-            <div class="container">
-              <div class="policy-container">
-                <h2>Quyền Lợi</h2>
-                <div class="policy-list">
-                  <div class="policy-item">
-                    <div class="policy-card">
-                      <i class="fa-solid fa-poo"></i>
-                      <span>Mua 5 tặng 1</span>
-                    </div>
-                  </div>
-                  <div class="policy-item">
-                    <div class="policy-card">
-                      <i class="fa-solid fa-poo"></i>
-                      <span>Freeship</span>
-                    </div>
-                  </div>
-                  <div class="policy-item">
-                    <div class="policy-card">
-                      <i class="fa-solid fa-poo"></i>
-                      <span>Giảm giá cho lần tiếp theo</span>
-                    </div>
-                  </div>
-                  <div class="policy-item">
-                    <div class="policy-card">
-                      <i class="fa-solid fa-poo"></i>
-                      <span>Có thể đổi trả hàng</span>
-                    </div>
-                  </div>
-                  <div class="policy-item">
-                    <div class="policy-card">
-                      <i class="fa-solid fa-poo"></i>
-                      <span>Nhiều ưu đãi hấp dẫn</span>
-                    </div>
-                  </div>
-                  <div class="policy-item">
-                    <div class="policy-card">
-                      <i class="fa-solid fa-poo"></i>
-                      <span>Hỗ trợ khách hàng tận răng</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
