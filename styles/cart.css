@@ -1,3 +1,5 @@
+@import url(./shared/quantity.css);
+
 .cart-wrapper {
   width: 100%;
   display: flex;
@@ -48,8 +50,8 @@ tr.cart-item td {
 
 }
 
-.product-quantity {
-
+.product-quantity .quantity-container {
+  justify-content: center;
 }
 
 .product-price {
@@ -63,32 +65,6 @@ tr.cart-item td {
 .cart-action {
 
 }
-
-.quantity-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-
-.quantity-container .quantity-btn {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-}
-
-.quantity-container .quantity-display {
-}
-
-.action-btns {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-
 /* Order Summary */
 .order-summary {
   width: 100%;

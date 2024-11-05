@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kira Kira</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/details.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header>
+        <div class="container">
+          <div class="header-container">
+            <div class="main-logo">
+              <a href="/">
+                <img src="assets/images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <nav>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#1">
+                    <i class="fa-solid fa-house"></i>
+                    Trang chủ
+                  </a>
+                </li>
+                <li class="menu-item"><a href="#2">Giới thiệu</a></li>
+                <li class="menu-item">
+                  <a href="./products.html">
+                    Sản phẩm
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Sản phẩm 1</a></li>
+                    <li><a href="#">Sản phẩm 2</a></li>
+                    <li><a href="#">Sản phẩm 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#4">
+                    <i class="fa-solid fa-gift"></i>
+                    gift
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </a>
+                  <ul class="submenu">
+                    <li><a href="#">Gift 1</a></li>
+                    <li><a href="#">Gift 2</a></li>
+                    <li><a href="#">Gift 3</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#5">Sale off</a></li>
+                <li class="menu-item"><a href="#5">Chính sách</a></li>
+                <li class="menu-item"><a href="#5">Liên hệ</a></li>
+              </ul>
+            </nav>
+            <div class="header-right">
+              <div class="control-box">
+                <div class="search-box">
+                  <button class="icon search-icon" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                  <input
+                    id="search-input"
+                    name="search-input"
+                    class="animation-fade-top"
+                    type="text"
+                    placeholder="Tìm kiếm"
+                  />
+                </div>
+                <button id="mini-cart" class="icon" aria-label="Cart">
+                  <a href="/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </a>
+                </button>
+                <div class="account">
+                  <a href="/register.html">Đăng ký</a>
+                  |
+                  <a href="/account.html">Đăng nhập</a>
+                </div>
+                <!-- <div class="account">
+                  <a href="/profile.html" class="profile-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Tài Khoản</span>
+                  </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-container details-page">
+          <nav class="breadcrumb-container">
+            <div class="container">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="./products.html">Sản phẩm</a></li>
+                <li class="breadcrumb-item active">Chi tiết Sản phẩm</li>
+              </ol>
+            </div>
+          </nav>
+          <div class="details-section">
+            <div class="container">
+              <div class="row details-container">
+                <div class="col col-2 details-left">
+                  <img src="./assets/images/default-user.png" alt="product" />
+                </div>
+                <div class="col col-2 details-right">
+                  <div class="details-information">
+                    <h2 class="infor-title">Product 1</h2>
+                    <h5 class>20.000 VND</h5>
+
+                    <div class=" align-items-center">
+                      <div class="quantity-container">
+                        <button class="btn icon quantity-btn decrease-btn" aria-label="Decrease">
+                          <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <span class="quantity-display">1</span>
+                        <input type="text" id="product-quantity-1" class="quantity-value" value="1" hidden />
+                        <button class="btn icon quantity-btn increase-btn" aria-label="Increase">
+                          <i class="fa-solid fa-plus"></i>
+                        </button>
+                      </div>
+                      - <span>Sổ lượng còn lại</span>
+                    </div>
+
+                    <div class="control-btns">
+                      <button class="btn btn-primary">Thêm vào giỏ hàng</button>
+                      <button class="btn btn-primary">Mua ngay</button>
+                    </div>
+
+                    <details>
+                      <summary>Mô tả sản phẩm</summary>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, porro animi. Modi
+                        voluptatibus, voluptatum quod molestiae dignissimos nam voluptas sint ipsa perferendis facere, a
+                        eligendi vel, quaerat nobis fuga deserunt!
+                      </p>
+                    </details>
+                    <details>
+                      <summary>Chính sách</summary>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, porro animi. Modi
+                        voluptatibus, voluptatum quod molestiae dignissimos nam voluptas sint ipsa perferendis facere, a
+                        eligendi vel, quaerat nobis fuga deserunt!
+                      </p>
+                    </details>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="footer-container">
+            <p>&copy;copyright by KhiemPham</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Loaded");
+    const minQuantity = 1;
+    const maxQuantity = 10;
+
+    const decreaseBtn = document.querySelector(".decrease-btn");
+    const increaseBtn = document.querySelector(".increase-btn");
+    const quantityValue = document.querySelector(".quantity-value");
+    const quantityDisplay = document.querySelector(".quantity-display");
+
+    let quantity = parseInt(quantityValue.value);
+
+    function updateDisplay() {
+      quantityValue.value = quantity;
+      quantityDisplay.textContent = quantity;
+      decreaseBtn.disabled = quantity <= minQuantity;
+      increaseBtn.disabled = quantity >= maxQuantity;
+    }
+
+    increaseBtn.addEventListener("click", function () {
+      if (quantity < maxQuantity) {
+        quantity++;
+        updateDisplay();
+      }
+    });
+
+    decreaseBtn.addEventListener("click", function () {
+      if (quantity > minQuantity) {
+        quantity--;
+        updateDisplay();
+      }
+    });
+
+    updateDisplay();
+  });
+</script>

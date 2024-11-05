@@ -1,0 +1,44 @@
+@import url(./shared/layout.css);
+@import url(./shared/products.css);
+@import url(./shared/quantity.css);
+
+.details-container {
+
+}
+
+.details-left {
+  overflow-x: hidden;
+}
+
+.details-left img {
+  width: max-content;
+  height: max-content;
+  /* animation: scroll .3s ease-in-out infinite alternate; */
+}
+
+.details-right {
+
+}
+
+.details-information {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.details-information details {
+  padding: 1rem;
+  border: 1px solid var(--separation-color);
+  border-radius: var(--border-radius);
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(15%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
