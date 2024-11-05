@@ -107,6 +107,7 @@ nav ul.menu > li > .submenu > li > a:hover {
   justify-content: flex-end;
   gap: 8px;
   text-transform: capitalize;
+  position: relative;
 }
 
 .header-right .control-box .account {
@@ -114,7 +115,6 @@ nav ul.menu > li > .submenu > li > a:hover {
 }
 
 .header-right .control-box .search-box {
-  position: relative;
 }
 
 .control-box .search-box input {

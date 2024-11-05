@@ -14,15 +14,19 @@
   --heading-color: #262626;
   --content-color: #262626;
   --text-color: #262626;
+  --light-color: #ffffff;
   --text-highlight: #c9184a;
   --border-color: #262626;
   --primary-color: #ffc8dd;
   --secondary-color: #ffafcc;
   --separation-color: #e6e6e6;
-  --box-shadow: 0px 4px 12px 4px #00000025;
+  --danger-color: #f44336;
+  --success-color: #4caf50;
+  --box-shadow: 0px 2px 4px #00000025;
   --overlay-color: #00000025;
   /* Size */
   --border-radius: 4px;
+  --large-border-radius: 16px;
 }
 
 body {
@@ -120,6 +124,35 @@ img {
   height: 100%;
 }
 
+.table-container {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+table.center td {
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary-color);
+  padding: 12px 16px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--separation-color);
+}
+
+tr:last-of-type td {
+  border-bottom: 0;
+}
+
 /* Button */
 button,
 .btn {
@@ -137,6 +170,14 @@ button,
   text-transform: capitalize;
 }
 
+button:disabled,
+.btn:disabled {
+  background-color: transparent;
+  border-color: var(--border-color);
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
 button.icon,
 .btn.icon {
   display: inline-flex;
@@ -147,20 +188,37 @@ button.icon,
   color: inherit;
 }
 
-.btn-primary {
+.btn.btn-primary {
   color: var(--text-color);
   background-color: var(--primary-color);
   border-color: transparent;
 }
 
-.btn-primary:hover {
+.btn.btn-primary:hover {
   color: var(--text-color);
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-.btn-text {
+.btn.btn-text {
   border: 0;
+}
+
+.btn.btn-danger {
+  color: var(--light-color);
+  background-color: var(--danger-color);
+  border-color: transparent;
+}
+
+.btn.btn-success {
+  color: var(--light-color);
+  background-color: var(--success-color);
+  border-color: transparent;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-success:hover {
+  opacity: 0.8;
 }
 
 /* Input */
@@ -208,7 +266,6 @@ input[type="radio"] {
   gap: 24px;
   margin-bottom: 16px;
 }
-
 
 .form-item {
   display: inline-flex;
@@ -366,4 +423,3 @@ input[type="radio"] {
 .drawer-footer .control-group {
   float: right;
 }
-
