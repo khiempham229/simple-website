@@ -68,7 +68,7 @@
 .policy-container {
   width: 50vw;
   /* height: 500px; */
-  background-color: var(--primary-color);
+  background-color: #bee0fe;
   border-radius: 16px;
   margin: 0 auto;
   text-align: center;
@@ -93,7 +93,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background-color: #BDE0FE;
+  background-color: var(--primary-color);
   padding: 8px 16px;
   border: 1px;
   border-radius: 8px;

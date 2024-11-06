@@ -17,8 +17,12 @@
   row-gap: 24px;
 }
 
+.products-list.product-carousel {
+  flex-wrap: nowrap;
+}
+
 .product-item {
-  flex-basis: 25%;
+  flex: 0 0 25%;
   padding: 0 12px;
 }
 
@@ -28,6 +32,11 @@
   border-width: 1px;
   border-radius: var(--product-radius);
   box-shadow: var(--box-shadow);
+  transition: all .3s ease;
+}
+
+.product-card:hover {
+  transform: translate(4px, -12px);
 }
 
 .product-thumbnail {
@@ -58,4 +67,8 @@
 
 nav.category {
   border-bottom: 1px solid var(--separation-color);
+}
+
+.product-carousel {
+  transition: transform 1s ease;
 }

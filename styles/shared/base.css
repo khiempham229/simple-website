@@ -14,11 +14,13 @@
   --heading-color: #262626;
   --content-color: #262626;
   --text-color: #262626;
-  --light-color: #ffffff;
+  --light-color: #fff8fb;
   --text-highlight: #c9184a;
   --border-color: #262626;
   --primary-color: #ffc8dd;
   --secondary-color: #ffafcc;
+  --light-primary-color: #ffe6f1;
+  /* --tertiary-color: #ffe6f1; */
   --separation-color: #e6e6e6;
   --danger-color: #f44336;
   --success-color: #4caf50;
@@ -312,15 +314,15 @@ input[type="radio"] {
 }
 
 .col-2 {
-  flex:  0 0 50%;
+  flex: 0 0 50%;
 }
 
 .col-3 {
-  flex:  0 0 33.33%;
+  flex: 0 0 33.33%;
 }
 
 .col-4 {
-  flex:  0 0 25%;
+  flex: 0 0 25%;
 }
 
 .flex-box {
@@ -439,4 +441,22 @@ input[type="radio"] {
 
 .drawer-footer .control-group {
   float: right;
+}
+
+/* Tag */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+  background-color: #e6e6e6;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.tag.tag-primary {
+  color: var(--text-highlight);
+  background-color: var(--light-primary-color);
+  border: 1px solid var(--primary-color);
 }
