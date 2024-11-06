@@ -13,6 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles/shared/layout.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
   </head>
   <body>
     <div class="app">
@@ -67,7 +68,13 @@
                   <button class="icon search-icon" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  <input id="search-input" name="search-input" class="animation-fade-top" type="text" placeholder="Tìm kiếm" />
+                  <input
+                    id="search-input"
+                    name="search-input"
+                    class="animation-fade-top"
+                    type="text"
+                    placeholder="Tìm kiếm"
+                  />
                 </div>
                 <button id="mini-cart" class="icon" aria-label="Cart">
                   <a href="/cart.html">
@@ -92,7 +99,128 @@
       </header>
       <main>
         <div class="main-container cart-page">
-          <h1>Cart</h1>
+          <nav class="breadcrumb-container">
+            <div class="container">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active">Giỏ hàng</li>
+              </ol>
+            </div>
+          </nav>
+          <div class="cart-container">
+            <div class="container">
+              <!-- <ul class="cart-list">
+                <li class="cart-item">
+                  <div class="product-card">
+                    <a class="product-thumbnail" href="#">
+                      <img src="./assets/images/products/keychain.jpg" alt="key-chain" />
+                    </a>
+                    <div class="product-info">
+                      <a href="#">
+                        <h5 class="product-name">Key chain</h5>
+                      </a>
+                      <div class="product-price">35.0000 VND</div>
+                    </div>
+                  </div>
+                </li>
+              </ul> -->
+
+              <div class="cart-wrapper">
+                <div class="cart-section-left">
+                  <h2>Giỏ hàng</h2>
+                  <div class="table-container">
+                    <table class="cart-table center">
+                      <thead class="cart-header">
+                        <tr>
+                          <th class="product-thumbnail"></th>
+                          <th class="product-name">Tên Sản Phẩm</th>
+                          <th class="product-quantity">Số Lượng</th>
+                          <th class="product-price">Giá</th>
+                          <th class="product-total">Thành Tiền</th>
+                          <th class="cart-action"></th>
+                        </tr>
+                      </thead>
+                      <tbody class="cart-body">
+                        <tr class="cart-item" data-product-id="1">
+                          <td class="product-thumbnail">
+                            <img src="./assets/images/default-user.png" alt="Product" />
+                          </td>
+                          <td class="product-name">Product 1</td>
+                          <td class="product-price">10.000 VND</td>
+                          <td class="product-quantity">
+                            <div class="quantity-container">
+                              <button class="btn icon quantity-btn decrease-btn" aria-label="Decrease">
+                                <i class="fa-solid fa-minus"></i>
+                              </button>
+                              <span class="quantity-display">1</span>
+                              <input type="text" id="product-quantity-1" class="quantity-value" value="1" hidden />
+                              <button class="btn icon quantity-btn increase-btn" aria-label="Increase">
+                                <i class="fa-solid fa-plus"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td class="product-total">10.000 VND</td>
+                          <td class="cart-action">
+                            <div class="action-btns">
+                              <button class="action-btn remove-btn btn icon" aria-label="Remove">
+                                <i class="fa-solid fa-trash"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="cart-item" data-product-id="2">
+                          <td class="product-thumbnail">
+                            <img src="./assets/images/default-user.png" alt="Product" />
+                          </td>
+                          <td class="product-name">Product 2</td>
+                          <td class="product-price">15.000 VND</td>
+                          <td class="product-quantity">
+                            <div class="quantity-container">
+                              <button class="btn icon quantity-btn decrease-btn" aria-label="Decrease">
+                                <i class="fa-solid fa-minus"></i>
+                              </button>
+                              <span class="quantity-display">1</span>
+                              <input type="text" id="product-quantity-2" class="quantity-value" value="1" hidden />
+                              <button class="btn icon quantity-btn increase-btn" aria-label="Increase">
+                                <i class="fa-solid fa-plus"></i>
+                              </button>
+                            </div>
+                          </td>
+                          <td class="product-total">30.000 VND</td>
+                          <td class="cart-action">
+                            <div class="action-btns">
+                              <button class="action-btn remove-btn btn icon" aria-label="Remove">
+                                <i class="fa-solid fa-trash"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="cart-section-right">
+                  <div class="order-summary">
+                    <h2>Thông tin đơn hàng</h2>
+                    <div class="table-container">
+                      <table class="order-summary-table">
+                        <tbody class="os-body">
+                          <tr>
+                            <td>Tổng Tiền</td>
+                            <td>30.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="control-btns">
+                        <button class="btn btn-primary">Thanh Toán</button>
+                        <a href="./products.html" class="btn">Tiếp tục Mua hàng</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer>
@@ -105,3 +233,44 @@
     </div>
   </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Loaded");
+    const minQuantity = 1;
+    const maxQuantity = 10;
+
+    document.querySelectorAll(".cart-item").forEach((container) => {
+      // Lấy các phần tử trong từng container sản phẩm
+      const decreaseBtn = container.querySelector(".decrease-btn");
+      const increaseBtn = container.querySelector(".increase-btn");
+      const quantityValue = container.querySelector(".quantity-value");
+      const quantityDisplay = container.querySelector(".quantity-display");
+
+      let quantity = parseInt(quantityValue.value);
+
+      function updateDisplay() {
+        quantityValue.value = quantity;
+        quantityDisplay.textContent = quantity;
+        decreaseBtn.disabled = quantity <= minQuantity;
+        increaseBtn.disabled = quantity >= maxQuantity;
+      }
+
+      increaseBtn.addEventListener("click", function () {
+        if (quantity < maxQuantity) {
+          quantity++;
+          updateDisplay();
+        }
+      });
+
+      decreaseBtn.addEventListener("click", function () {
+        if (quantity > minQuantity) {
+          quantity--;
+          updateDisplay();
+        }
+      });
+
+      updateDisplay();
+    });
+  });
+</script>

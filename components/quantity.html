@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component</title>
+  </head>
+  <style>
+    .quantity-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .quantity-container .quantity-btn {
+      cursor: pointer;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+    }
+
+    .quantity-container .quantity-display {
+    }
+
+    .action-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  </style>
+  <body style="display: flex; justify-content: center; align-items: center; height: 100%; margin: 0">
+    <div class="quantity-container">
+      <button class="btn icon quantity-btn decrease-btn" aria-label="Decrease">
+        <i class="fa-solid fa-minus"></i>
+      </button>
+      <span class="quantity-display">1</span>
+      <input type="text" id="product-quantity-1" class="quantity-value" value="1" hidden />
+      <button class="btn icon quantity-btn increase-btn" aria-label="Increase">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const minQuantity = 1;
+    const maxQuantity = 10;
+
+    const decreaseBtn = document.querySelector(".decrease-btn");
+    const increaseBtn = document.querySelector(".increase-btn");
+    const quantityValue = document.querySelector(".quantity-value");
+    const quantityDisplay = document.querySelector(".quantity-display");
+
+    let quantity = parseInt(quantityValue.value);
+
+    function updateDisplay() {
+      quantityValue.value = quantity;
+      quantityDisplay.textContent = quantity;
+      decreaseBtn.disabled = quantity <= minQuantity;
+      increaseBtn.disabled = quantity >= maxQuantity;
+    }
+
+    increaseBtn.addEventListener("click", function () {
+      if (quantity < maxQuantity) {
+        quantity++;
+        updateDisplay();
+      }
+    });
+
+    decreaseBtn.addEventListener("click", function () {
+      if (quantity > minQuantity) {
+        quantity--;
+        updateDisplay();
+      }
+    });
+
+    updateDisplay();
+  });
+</script>

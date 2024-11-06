@@ -1,0 +1,28 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
+.carousel-container .carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel-container .carousel-control-btn {
+  padding: 16px;
+  color: #FFFFFF75;
+  background-color: #00000025;
+  border-radius: 50%;
+}
+
+.carousel-container .carousel-control-btn:hover {
+  background-color: #00000075;
+}
