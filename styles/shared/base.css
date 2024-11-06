@@ -153,6 +153,10 @@ button.icon,
   border-color: transparent;
 }
 
+.btn-primary a {
+  color: var(--text-color);
+}
+
 .btn-primary:hover {
   color: var(--text-color);
   background-color: var(--secondary-color);
@@ -273,6 +277,10 @@ input[type="radio"] {
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.w-full {
+  width: 100%;
 }
 
 /* Customize Component */

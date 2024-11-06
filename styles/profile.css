@@ -16,7 +16,6 @@ aside {
 }
 
 main {
-  
 }
 
 #profile-sidebar {
@@ -51,7 +50,6 @@ main {
 }
 
 .sidebar-content .sidebar-list {
-
 }
 
 .sidebar-content .sidebar-list .sidebar-item a {
@@ -67,7 +65,8 @@ main {
   background-color: var(--primary-color);
 }
 
-.profile-page {}
+.profile-page {
+}
 
 .profile-container {
   padding: 32px 0;
@@ -93,7 +92,6 @@ main {
   margin-bottom: 16px;
 }
 
-
 .profile-form .form-item {
   display: inline-flex;
   align-items: flex-start;
@@ -110,4 +108,77 @@ main {
   display: flex;
   justify-content: flex-end;
   gap: 24px;
+}
+
+/* Purchase History */
+.order-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.order-summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary span {
+  flex: 1 1 200px;
+  margin-bottom: 5px;
+}
+
+.toggle-details {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.toggle-details:hover {
+  background-color: #0056b3;
+}
+
+.order-details {
+  display: none;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.order-details p {
+  margin: 10px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
 }

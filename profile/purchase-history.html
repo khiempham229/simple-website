@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kira Kira - Profile</title>
-    <base href="/">
+    <base href="/" />
     <link rel="icon" type="image/x-icon" href="assets/images/logo.ico" />
     <link
       rel="stylesheet"
@@ -69,7 +69,13 @@
                   <button class="icon search-icon" aria-label="Search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </button>
-                  <input id="search-input" name="search-input" class="animation-fade-top" type="text" placeholder="Tìm kiếm" />
+                  <input
+                    id="search-input"
+                    name="search-input"
+                    class="animation-fade-top"
+                    type="text"
+                    placeholder="Tìm kiếm"
+                  />
                 </div>
                 <button id="mini-cart" class="icon" aria-label="Cart">
                   <a href="/cart.html">
@@ -96,7 +102,7 @@
         <div class="sidebar-wrapper">
           <div class="sidebar-header">
             <div class="sidebar-title">
-              <img src="./assets/images/default-user.png" alt="User">
+              <img src="./assets/images/default-user.png" alt="User" />
               <span>Khiem Pham</span>
             </div>
           </div>
@@ -109,7 +115,7 @@
               </li>
               <li class="sidebar-item">
                 <a href="/profile/order-information.html">
-                  <span>Thông tin đơn hàng</span>
+                  <span>Lịch sử mua hàng</span>
                 </a>
               </li>
             </ul>
@@ -120,23 +126,97 @@
         <div class="main-container profile-page">
           <div class="container">
             <div class="profile-container">
-              <h2 class="text-center">Thông tin cá nhân</h2>
-              <form class="profile-form">
-                <div class="form-row">
-                  <div class="form-item">
-                    <label for="ten">Tên</label>
-                    <input id="ten" name="ten" type="text" placeholder="Tên">
+              <h2 class="text-center">Lịch sử mua hàng</h2>
+              <div class="order-list">
+                <div class="order-item">
+                  <div class="order-summary">
+                    <span>Mã đơn hàng: #12345</span>
+                    <span>Ngày đặt: 01/11/2024</span>
+                    <span>Trạng thái: Đang giao</span>
+                    <span>Tổng tiền: 500.000 VND</span>
+                    <button class="toggle-details">Xem chi tiết</button>
                   </div>
-                  <div class="form-item">
-                    <label for="ho">Họ</label>
-                    <input id="ho" name="ho" type="text" placeholder="Họ">
+                  <div class="order-details">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Sản phẩm</th>
+                          <th>Số lượng</th>
+                          <th>Giá</th>
+                          <th>Thành tiền</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Keychain</td>
+                          <td>2</td>
+                          <td>100.000 VND</td>
+                          <td>200.000 VND</td>
+                        </tr>
+                        <tr>
+                          <td>Ốp điện thoại</td>
+                          <td>1</td>
+                          <td>300.000 VND</td>
+                          <td>300.000 VND</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      <strong>Địa chỉ giao hàng:</strong>
+                      123 Đường ABC, Quận 1, TP.HCM
+                    </p>
+                    <p>
+                      <strong>Phương thức thanh toán:</strong>
+                      Thanh toán khi nhận hàng
+                    </p>
                   </div>
                 </div>
-                <div class="form-control">
-                  <button type="reset">Đặt lại</button>
-                  <button class="btn-primary" type="button">Lưu</button>
+
+                <!-- Đơn hàng tiếp theo -->
+                <div class="order-item">
+                  <div class="order-summary">
+                    <span>Mã đơn hàng: #12346</span>
+                    <span>Ngày đặt: 25/10/2024</span>
+                    <span>Trạng thái: Đã giao</span>
+                    <span>Tổng tiền: 300.000 VND</span>
+                    <button class="toggle-details">Xem chi tiết</button>
+                  </div>
+                  <div class="order-details">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Sản phẩm</th>
+                          <th>Số lượng</th>
+                          <th>Giá</th>
+                          <th>Thành tiền</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Sách A</td>
+                          <td>1</td>
+                          <td>150.000 VND</td>
+                          <td>150.000 VND</td>
+                        </tr>
+                        <tr>
+                          <td>Sách B</td>
+                          <td>1</td>
+                          <td>150.000 VND</td>
+                          <td>150.000 VND</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      <strong>Địa chỉ giao hàng:</strong>
+                      456 Đường DEF, Quận 2, TP.HCM
+                    </p>
+                    <p>
+                      <strong>Phương thức thanh toán:</strong>
+                      Chuyển khoản
+                    </p>
+                  </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -151,3 +231,23 @@
     </div>
   </body>
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll(".toggle-details");
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const orderDetails = this.parentElement.nextElementSibling;
+        const isVisible = orderDetails.style.display === "block";
+
+        if (isVisible) {
+          orderDetails.style.display = "none";
+          this.textContent = "Xem chi tiết";
+        } else {
+          orderDetails.style.display = "block";
+          this.textContent = "Ẩn chi tiết";
+        }
+      });
+    });
+  });
+</script>
